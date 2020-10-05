@@ -24,16 +24,16 @@
             </a>
             <ul class="site-navigation">
               <li class="site-navigation-item">
-                <a class="link-item" href="#">Статьи</a>
+                <a class="link-item" href="#posts">Статьи</a>
               </li>
               <li class="site-navigation-item">
-                <a class="link-item" href="#">Обо мне</a>
+                <a class="link-item" href="#about">Обо мне</a>
               </li>
               <li class="site-navigation-item">
-                <a class="link-item" href="#">Портфолио</a>
+                <a class="link-item" href="#portfolio">Портфолио</a>
               </li>
               <li class="site-navigation-item">
-                <a class="link-item" href="#">Написать мне</a>
+                <a class="link-item" href="#back-channeling">Написать мне</a>
               </li>
             </ul>
           </div>
@@ -43,7 +43,7 @@
     </header>
     <main>
       <h1 class="visually-hidden">Личный блог Анны Свит</h1>
-      <section class="posts">
+      <section class="posts" id="posts">
         <div class="container">
           <header class="section-header">
             <h2 class="section-title">Все статьи</h2>
@@ -51,7 +51,7 @@
           </header>
           <ul class="post-list">
             <li class="post-item">
-              <a class="post-item-link" href="card.html">
+              <a class="post-item-link" href="./post.html">
                 <img src="./img/11.jpg" alt="Путешествие в Берлин в августе" />
                 <h3 class="post-item-title">Путешествие в Берлин в августе</h3>
                 <p class="post-item-description">
@@ -67,7 +67,7 @@
               </a>
             </li>
             <li class="post-item">
-              <a class="post-item-link" href="card.html">
+              <a class="post-item-link" href="./post.html">
                 <img src="./img/12.jpg" alt="Где выпить колдбрю в Москве" />
                 <h3 class="post-item-title">Где выпить колдбрю в Москве</h3>
                 <p class="post-item-description">
@@ -83,7 +83,7 @@
               </a>
             </li>
             <li class="post-item">
-              <a class="post-item-link" href="card.html">
+              <a class="post-item-link" href="./post.html">
                 <img src="./img/13.jpg" alt="Прочитано: книжные рекомендации" />
                 <h3 class="post-item-title">Прочитано: книжные рекомендации</h3>
                 <p class="post-item-description">
@@ -101,7 +101,7 @@
           </ul>
           <ul class="post-photos">
             <li class="post-photo">
-              <a class="post-photo-link" href="card.html">
+              <a class="post-photo-link" href="./post.html">
                 <h3 class="post-photo-title">Снимки на плёнку</h3>
                 <p class="post-photo-description">
                   Поделилась с вами весенними фотографиями,<br />
@@ -116,7 +116,7 @@
               </a>
             </li>
             <li class="post-photo">
-              <a class="post-photo-link" href="card.html">
+              <a class="post-photo-link" href="./post.html">
                 <h3 class="post-photo-title">Домашний чизкейк</h3>
                 <p class="post-photo-description">
                   Что может быть лучше чизкейка с сезонными ягодами? Только
@@ -135,7 +135,7 @@
         </div>
         <!-- /.container -->
       </section>
-      <section class="about">
+      <section class="about" id="about">
         <div class="container">
           <h2 class="section-title">Обо мне</h2>
           <div class="about-me">
@@ -171,7 +171,7 @@
         </div>
         <!-- /.container -->
       </section>
-      <section class="portfolio">
+      <section class="portfolio" id="portfolio">
         <div class="container">
           <h2 class="section-title">Портфолио</h2>
           <ul class="portfolio-list">
@@ -261,6 +261,7 @@
               cols="30"
               rows="10"
               class="back-channeling-message"
+              required
             >Напишите здесь ваше сообщение.
           </textarea>
           <input class="form-button" type="submit">
