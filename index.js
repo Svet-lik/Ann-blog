@@ -7,6 +7,8 @@ const userEmail = document.querySelector('#user-email');
 const message = document.querySelector('#message');
 const button = document.querySelector('.button');
 const backChannelingForm = document.querySelector('.back-channeling-form');
+const postsFilters = document.querySelector('.posts-filters');
+
 
 const changeLike = () => {
   if (like.classList.contains('added')) {
@@ -46,6 +48,20 @@ const createNewComment = () => {
   clearFields();
 };
 
+const renderNews = () => {
+  const newsArticles = document.querySelectorAll('.news-article');
+  newsArticles.forEach(e => {
+    console.log('filter: ' + postsFilters.value, ' teg: '+ e.dataset.category);
+      if (postsFilters.value === 'all' || e.dataset.category === postsFilters.value) {
+        e.dataset.visible = 'visible'
+      } else {
+        e.dataset.visible = 'hidden'
+      }
+
+  })
+}
+
+
 message.addEventListener('input', () => {
   const charCounter = message.value.length;
   if (charCounter > 9 && charCounter < 201) {
@@ -65,10 +81,10 @@ if (like) {
 }
 
 if (commentForm) {
-commentForm.addEventListener('submit', e => {
-  e.preventDefault();
-  createNewComment();
-});
+  commentForm.addEventListener('submit', e => {
+    e.preventDefault();
+    createNewComment();
+  });
 }
 
 if (backChannelingForm) {
@@ -77,3 +93,9 @@ if (backChannelingForm) {
     clearFields();
   })
 }
+
+if (postsFilters) {
+  postsFilters.addEventListener('change', renderNews);
+}
+
+// display: list-item;
