@@ -8,6 +8,11 @@ body {
   font-style: normal;
   font-weight: normal;
   box-sizing: border-box;
+
+
+  /***************************************
+  background: url('./img/Desktop-2.jpg');
+  block-size: 1440px auto;*/
 }
 p {
   margin: 0;
@@ -71,6 +76,11 @@ ul {
   background-size: contain;
   background-repeat: no-repeat;
   margin: 0 auto;
+
+
+  /********************************************
+  width: 1440px;
+  height: 581px;*/
 }
 
 .main-header.post {
@@ -366,7 +376,7 @@ ul {
   height: 293px;
   padding-top: 20px;
 }
-.form-button {
+.back-channeling-form button {
   box-sizing: border-box;
   margin-top: 15px;
   padding: 12px 65px 10px 63px;
@@ -398,6 +408,9 @@ ul {
   text-decoration: none;
   color: #2e2f22;
 }
+.warning {
+  color: red;
+}
 /* Стили для страницы со статьей*/
 .one-post .container {
   text-align: left;
@@ -415,7 +428,7 @@ ul {
   margin-bottom: 52px;
 }
 .post-text {
-  margin-bottom: 42px;
+  margin-bottom: 38px;
 }
 .post-text p {
   margin-bottom: 26px;
@@ -429,32 +442,36 @@ figure {
 figcaption {
   font-size: 14px;
   line-height: 26px;
-  margin-top: 4px;
+  margin-top: 8px;
 }
 .post-social-wrapper {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .like {
   width: 50px;
-  height: 50px;
-  padding-top: 26px;
+  min-height: 54px;
+  margin-top: 4px;
   background: url("./img/like.svg") no-repeat;
-  min-width: 70px;
-  min-height: 50px;
-  border: none;
+  fill: #2e2f22;
+  outline: none;
   background-color: transparent;
   background-repeat: no-repeat;
-  background-position: 0px;
+  background-position: 0 0;
   cursor: pointer;
 }
-
+.like:hover {
+  transform: translateY(-4px);
+}
 .likes-number {
-  margin-left: 64px;
+  margin-left: 14px;
+  margin-right: auto;
+  margin-top: 29px;
   font-size: 24px;
   line-height: 24px;
 }
 .post-social {
+  margin-left: auto;
   display: flex;
   justify-content: space-between;
   margin-bottom: 38px;
@@ -462,18 +479,21 @@ figcaption {
 .social-sign-link {
   display: block;
   width: 50px;
-  height: 50px;
+  height: 54px;
   margin-left: 32px;
   cursor: pointer;
 }
+.social-sign-link:hover {
+  transform: translateY(-4px);
+}
 .social-sign-link.twitter {
-  background: url("./img/twitter.svg") 50% 50% no-repeat;
+  background: url("./img/twitter.svg") 50% 8px no-repeat;
 }
 .social-sign-link.facebook {
-  background: url("./img/facebook.svg") 50% 50% no-repeat;
+  background: url("./img/facebook.svg") 50% 4px no-repeat;
 }
 .social-sign-link.vk {
-  background: url("./img/vk.svg") 50% 50% no-repeat;
+  background: url("./img/vk.svg") 50% 14px no-repeat;
 }
 .btn-all-posts {
   display: block;
@@ -485,6 +505,7 @@ figcaption {
   color: #2e2f22;
   background: url("./img/Arrow.svg") right center no-repeat;
   margin-bottom: 65px;
+  margin-left: 1px;
 }
 .comment-feed {
   width: 793px;
@@ -551,6 +572,7 @@ figcaption {
   display: block;
   width: 100%;
   border: none;
+  outline: none;
   border-bottom: 1px solid #2e2f22;
   padding: 0;
   padding-bottom: 15px;
@@ -562,13 +584,20 @@ figcaption {
   height: 46px;
   margin-top: 18px;
   border: 1px solid #202117;
+  outline: none;
   box-sizing: border-box;
   border-radius: 10px;
   background-color: transparent;
 }
+.button:hover:not(.nohover){
+  transform: 0 4px;
+  background-color: #ffffff;
+  filter: drop-shadow(2px 2px 3px #2e2f22);
+}
 .comment-field-input {
   width: 100%;
   height: 208px;
+  outline: none;
   background-color: transparent;
   border: 1px solid #2e2f22;
   box-sizing: border-box;

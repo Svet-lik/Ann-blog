@@ -13,6 +13,7 @@
       href="https://fonts.googleapis.com/css2?family=Spectral+SC:wght@700&display=swap"
       rel="stylesheet"
     />
+    <script src="./index.js" defer></script>
   </head>
   <body>
     <header class="main-header">
@@ -145,7 +146,8 @@
                 <p class="about-intro-p">
                   Всем привет! Меня зовут Аня, и это мой личный блог. <br />
                   Здесь ты найдёшь рассказы о моих путешествиях, снимки <br />
-                  на плёнку, рецепты, обзоры на книги. В общем, тексты о том, <br />что мне интересно.
+                  на плёнку, рецепты, обзоры на книги. В общем, тексты о том,
+                  <br />что мне интересно.
                 </p>
                 <p class="about-intro-p">
                   Я работаю копирайтером, поэтому мой блоге — это ещё и моё
@@ -155,7 +157,9 @@
                 </p>
                 <p class="about-intro-p">
                   Если вы хотите написать мне — это можно сделать в соцсетях<br />
-                  или через <a href="#back-channeling" class="link-text">форму</a>. Всегда приятно услышать обратную связь<br />
+                  или через
+                  <a href="#back-channeling" class="link-text">форму</a>. Всегда
+                  приятно услышать обратную связь<br />
                   от читателей и познакомиться поближе.
                 </p>
                 <p class="about-intro-p">Приятного чтения!</p>
@@ -221,7 +225,6 @@
         <div class="container">
           <h2 class="section-title">Написать мне</h2>
           <form
-            action="#"
             method="post"
             class="back-channeling-form"
             name="back-channeling-form"
@@ -237,6 +240,7 @@
                   id="user-name"
                   class="back-channeling-input"
                   placeholder="Иван Иванов"
+                  required
                 />
               </div>
               <div class="form-block">
@@ -261,10 +265,13 @@
               cols="30"
               rows="10"
               class="back-channeling-message"
+              minlength="10"
+              maxlength="200"
+              placeholder="Напишите здесь ваше сообщение."
               required
-            >Напишите здесь ваше сообщение.
-          </textarea>
-          <input class="form-button" type="submit">
+            ></textarea
+            >
+            <input class="button nohover" type="submit" disabled/>
           </form>
         </div>
         <!-- /.container -->
