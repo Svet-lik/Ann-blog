@@ -574,7 +574,8 @@ figcaption {
 }
 .comment-inner {
   width: 221px;
-  margin-right: 84px;
+  margin-right: 84px;  
+  outline: none;
 }
 .comment-field {
   display: block;
@@ -618,6 +619,39 @@ figcaption {
   padding: 17px 20px;
 }
 
+/* Модальное окно */
+.modal {
+  position: fixed;
+  bottom: 40%;
+  width: 100%;
+  display: none;
+  z-index: 999;
+ }
+ .close {
+  font-size: 36px;
+  border: none;
+  margin-left: auto;
+  background-color: transparent;
+  outline: none;
+}
+ .modal-dialog {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+  max-width: 300px;
+  width: 95%;
+  background: #ffffff;
+  border-radius: 5px;
+  margin: auto;
+  padding: 5px 5px 40px;
+  border: 1px solid #2e2f22;
+  border-radius: 10px;
+}
+.modal-text {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
 /* стили для js */
 .warning {
   color: red;
@@ -625,3 +659,6 @@ figcaption {
 .news-article[data-visible='hidden'] {
   display: none;
 }
+.is-open {
+  display: block;
+} 

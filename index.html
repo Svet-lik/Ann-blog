@@ -49,15 +49,13 @@
           <header class="section-header">
             <h2 class="section-title">Все статьи</h2>
             <select class="posts-filters">
-            <option value="travelling">путешествия</option>
-            <option value="town">город</option>
-            <option value="book">книги</option>
-            <option value="photo">фотографии</option>
-            <option value="recipes">рецепты</option>
-            <option value="all" selected>Выбрать тему</option>
-
-            
-          </select>
+              <option value="travelling">путешествия</option>
+              <option value="town">город</option>
+              <option value="book">книги</option>
+              <option value="photo">фотографии</option>
+              <option value="recipes">рецепты</option>
+              <option value="all" selected>Выбрать тему</option>
+            </select>
           </header>
           <ul class="post-list">
             <li class="post-item news-article" data-category="travelling">
@@ -278,9 +276,8 @@
               maxlength="200"
               placeholder="Напишите здесь ваше сообщение."
               required
-            ></textarea
-            >
-            <input class="button nohover" type="submit" disabled/>
+            ></textarea>
+            <input class="button nohover" type="submit" disabled />
           </form>
         </div>
         <!-- /.container -->
@@ -302,5 +299,13 @@
         </li>
       </ul>
     </footer>
+
+    <div class="modal">
+      <div class="modal-dialog">
+        <button class="close">&times;</button>
+        <p class="modal-text">Ваше сообщение отправлено</p>
+        <button class="button" id="modal-button">Закрыть</button>
+      </div>
+    </div>
   </body>
 </html>

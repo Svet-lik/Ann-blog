@@ -8,7 +8,13 @@ const message = document.querySelector('#message');
 const button = document.querySelector('.button');
 const backChannelingForm = document.querySelector('.back-channeling-form');
 const postsFilters = document.querySelector('.posts-filters');
+const modal = document.querySelector('.modal');
+const close = document.querySelector('.close');
+const modalButton = document.querySelector('#modal-button');
 
+const toggleModal = () => {
+  modal.classList.toggle('is-open');
+}
 
 const changeLike = () => {
   if (like.classList.contains('added')) {
@@ -84,12 +90,14 @@ if (commentForm) {
   commentForm.addEventListener('submit', e => {
     e.preventDefault();
     createNewComment();
+    toggleModal();
   });
 }
 
 if (backChannelingForm) {
   backChannelingForm.addEventListener('submit', e => {
     e.preventDefault();
+    toggleModal();
     clearFields();
   })
 }
@@ -98,4 +106,5 @@ if (postsFilters) {
   postsFilters.addEventListener('change', renderNews);
 }
 
-// display: list-item;
+close.addEventListener('click', toggleModal);
+modalButton.addEventListener('click', toggleModal);
